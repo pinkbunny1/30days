@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+</head>
+<body>
+
+
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand" id="hour"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+
+
+  <style>
+    html {
+      background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+      background-size:cover;
+      font-family:'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display:flex;
+      flex:1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border:20px solid white;
+      border-radius:50%;
+      margin:50px auto;
+      position: relative;
+      padding:2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width:50%;
+      height:6px;
+      background:black;
+      position: absolute;
+      top:50%;
+
+      transform: rotate(90deg);
+      transform-origin: 100%;
+      transition: transform 0.05s cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+    /* TODO: how to make hands length be different sizes ? */
+
+  </style>
+
+  <script>
+  // Select hands element that will have transform effect implemented;
+    const secsHand = document.getElementsByClassName("hand second-hand")
+    const minsHand = document.querySelector(".min-hand")
+    const hrsHand = document.getElementById("hour")
+  /*
+   NOTE
+    getElementsByClassName() returns NodeList object. Therefore to access it, it must be done by declaring its index such as obj[index]. This is different from .querySelector which returns first found element
+  */
+
+
+  // Get Real Time(secs, mins, hrs) from Date() class;
+    function setDate() {
+    // Get current time
+      const now = new Date();
+      const seconds = now.getSeconds();
+      const mins = now.getMinutes();
+      const hours = now.getHours();
+
+      console.log(seconds)
+
+    // change 60 time metric to match 360 angle degree in hands
+      const secAngle = (seconds/60)*360 + 90
+      const minAngle = (mins/60)*360 + 90
+      const hourAngle = (hours/60)*360 + 90
+
+    // Apply Tranform to hand elements by angle deg
+      secsHand[0].style.transform = `rotate(${secAngle}deg)`;
+      minsHand.style.transform = `rotate(${minAngle}deg)`;
+      hrsHand.style.transform = `rotate(${hourAngle}deg)`;
+    }
+
+  // Run clock by calling setDate() every second
+    setInterval(setDate, 1000);
+
+  // Initiate clock with the current time
+    setDate();
+
+
+  </script>
+</body>
+</html>
