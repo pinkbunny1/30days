@@ -95,7 +95,7 @@
     // change 60 time metric to match 360 angle degree in hands
       const secAngle = (seconds/60)*360 + 90
       const minAngle = (mins/60)*360 + 90
-      const hourAngle = (hours/60)*360 + 90
+      const hourAngle = (hours/12)*360 + 90
 
     // Apply Tranform to hand elements by angle deg
       secsHand[0].style.transform = `rotate(${secAngle}deg)`;
