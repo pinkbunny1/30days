@@ -1,5 +1,6 @@
 # Day 2 : CSS Transform and transition
 
+- Demo: https://pinkbunny1.github.io/30days/day2/clock.html
 - Make the clock hands move by using CSS Transform, Transition and vanilla Javascript
 - Good resources to read on transform: https://tympanus.net/codrops/css_reference/transform/
 - Syntax on transition
