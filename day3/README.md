@@ -1,5 +1,7 @@
 # day3 : Preloading from scratch
 
+- Demo : https://pinkbunny1.github.io/30days/day3/
+
 - Using CSS alone to create a preloader. It is incredibly simple with a use of Border and Animation features from CSS.
 
 - I am starting to enjoy what CSS has to offer. I had no idea how great CSS was before !
