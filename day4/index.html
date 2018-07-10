@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Let's build a simple preloader which I will use for my Star Wars page -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Preloader</title>
+  </head>
+  <body>
+    <div class="preloader"></div>
+    <div class="ready">
+      <h2>The page is loaded...</h2>
+    </div>
+
+  <script>
+    function loadPage() {
+      document.getElementsByClassName('preloader')[0].style.display = "none";
+      document.getElementsByClassName('ready')[0].style.display = "block";
+    }
+
+    setTimeout(loadPage, 3000);
+
+
+  </script>
+  </body>
+</html>

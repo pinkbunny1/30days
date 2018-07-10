@@ -1,0 +1,61 @@
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -75px 0 0 -45px;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border: 18px solid lightgrey;
+  border-top: 18px solid grey;
+  border-radius: 50%;
+
+  animation: spin-nonstop 2s linear infinite;
+  -webkit-animation: spin-nonstop 2s linear infinite;
+
+}
+
+@keyframes spin-nonstop {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spin-nonstop {
+  0% { -webkit-transform: rotate(0deg);}
+  100% { -webkit-transform: rotate(360deg);}
+}
+
+
+/* Main page when the data is ready */
+.ready {
+  position: relative;
+  display: none;
+  text-align: center;
+  padding-top: 100px;
+  animation: slideUp 1s linear;
+  -webkit-animation: slideUp 1s;
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -400px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+-webkit-@keyframes slideUp {
+  0% {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
