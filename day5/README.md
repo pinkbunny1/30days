@@ -7,21 +7,21 @@
 
 ## Keywords
 - <b>Containers</b>: Virtual Environment more like a sandbox where apps and its dependencies are installed to run
-- Images : Blueprint. (where containers are created from)
-- Dockerfile : A list of instructions that defines what goes inside(environment of) the container. Such as which ports to map to (the outside world), which files to be copied in the container. This makes sure that the app built inside the container based on that Dockerfile behaves the same wherever it runs.
-- Docker Daemon : OS Background service in the host that handles building and running docker containers.
-- Docker Client : Terminal tool that the user uses to talk to Daemon.
-- Docker Hub : A storage of Docker images. User can host their docker image or can use existing docker images from the Docker Hub by 'pulling' it.
+- <b>Images</b> : Blueprint. (where containers are created from)
+- <b>Dockerfile</b> : A list of instructions that defines what goes inside(environment of) the container. Such as which ports to map to (the outside world), which files to be copied in the container. This makes sure that the app built inside the container based on that Dockerfile behaves the same wherever it runs.
+- <b>Docker Daemon</b> : OS Background service in the host that handles building and running docker containers.
+- <b>Docker Client</b> : Terminal tool that the user uses to talk to Daemon.
+- <b>Docker Hub</b> : A storage of Docker images. User can host their docker image or can use existing docker images from the Docker Hub by 'pulling' it.
 
 
 
 
 ## commands
-- "docker build (-t nameOfImage) ." : Creates an image. Using -t, tag allows users to give a name to the image for convenience.
+- `docker build (-t nameOfImage) .` : Creates an image. Using -t, tag allows users to give a name to the image for convenience.
 
-- "docker run [image ID or Repository Name]" : Creates a container based on the chosen Image. This is why Image is referred as blueprint; containers are created based on the instructions of Images.
+- `docker run [image ID or Repository Name]` : Creates a container based on the chosen Image. This is why Image is referred as blueprint; containers are created based on the instructions of Images.
 
-- "docker run -it [image] sh" : Creates a container and able to interact with that container on the terminal so it enables navigation around container on the host terminal. Containers are created without '-it' will run in the background and the users cant see it nor access it from the terminal.
+- `docker run -it [image] sh` : Creates a container and able to interact with that container on the terminal so it enables navigation around container on the host terminal. Containers are created without '-it' will run in the background and the users cant see it nor access it from the terminal.
 
 
 
