@@ -6,7 +6,7 @@
 
 
 ## Keywords
-- Containers: Virtual Environment more like a sandbox where apps and its dependencies are installed to run
+- <b>Containers</b>: Virtual Environment more like a sandbox where apps and its dependencies are installed to run
 - Images : Blueprint. (where containers are created from)
 - Dockerfile : A list of instructions that defines what goes inside(environment of) the container. Such as which ports to map to (the outside world), which files to be copied in the container. This makes sure that the app built inside the container based on that Dockerfile behaves the same wherever it runs.
 - Docker Daemon : OS Background service in the host that handles building and running docker containers.
