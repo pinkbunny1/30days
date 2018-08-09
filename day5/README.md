@@ -58,10 +58,10 @@
 
 2. Tag the image. Image needs to be tagged to be identified later on in the docker repository. The syntax is `docker tag image username/repository:tag` -->
 `docker tag simple_app snowytrees/get_started:part2`
-simple_app : name of image
-snowytrees : username
-repository : name of repository, it can be anything
-tag : versioning system for repository. Optional but recommended
+   - simple_app : name of image
+   - snowytrees : username
+   - repository : name of repository, it can be anything
+   - tag : versioning system for repository. Optional but recommended
 
 3. See the newly created image tagged. `docker image ls` It shows the tagged image newly created along side the old ones.
 
