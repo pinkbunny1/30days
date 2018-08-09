@@ -19,9 +19,9 @@
 ## commands
 - "docker build (-t nameOfImage) ." : Creates an image. Using -t, tag allows users to give a name to the image for convenience.
 
-- "docker run <image ID or Repository Name>" : Creates a container based on the chosen Image. This is why Image is referred as blueprint; containers are created based on the instructions of Images.
+- "docker run [image ID or Repository Name]" : Creates a container based on the chosen Image. This is why Image is referred as blueprint; containers are created based on the instructions of Images.
 
-- "docker run -it <image> sh" : Creates a container and able to interact with that container on the terminal so it enables navigation around container on the host terminal. Containers are created without '-it' will run in the background and the users cant see it nor access it from the terminal.
+- "docker run -it [image] sh" : Creates a container and able to interact with that container on the terminal so it enables navigation around container on the host terminal. Containers are created without '-it' will run in the background and the users cant see it nor access it from the terminal.
 
 
 
@@ -40,6 +40,6 @@
 
 7. List running docker containers. Command : 'docker container ls'. It shows a list of running containers with its ID, Image, Status etc.. OR 'docker container ls -a' (-a stands for all, it shows all docker containers including the exited ones)
 
-8. Kill/Stop docker containers. Command : 'docker container stop <container ID>'
+8. Kill/Stop docker containers. Command : 'docker container stop [container ID]'
 
 9. Remove unused docker containers to save space in the machine. Command : 'docker rm [containder ID]'
