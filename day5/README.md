@@ -65,6 +65,6 @@
 
 3. See the newly created image tagged. `docker image ls` It shows the tagged image newly created along side the old ones.
 
-4. Publish image to the repository. `docker push username/repository:tag` --> `docker push snowytrees/get_started:part2` This pushes the image(get_started:part2) to the [Docker Hub(repository)](https://hub.docker.com/) and type 'username/repository'
+4. Publish image to the repository. `docker push username/repository:tag` --> `docker push snowytrees/get_started:part2` This pushes the image(get_started:part2) to the [Docker Hub(repository)](https://hub.docker.com/).
 
 5. Run container using the remote image. Once the image is pushed in the remote hub, it can be used anywhere. `docker run -p username/repository:tag` --> `docker run -p snowytrees/get_started:part2` This pulls the image from the repository hub to the local machine if the image is not locally available. And runs the container once the image is available on the local machine.
