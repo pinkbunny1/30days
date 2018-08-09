@@ -42,4 +42,4 @@
 
 8. Kill/Stop docker containers. Command : 'docker container stop <container ID>'
 
-9. Remove unused docker containers to save space in the machine. Command : 'docker rm <<containder ID>>'
+9. Remove unused docker containers to save space in the machine. Command : 'docker rm [containder ID]'
