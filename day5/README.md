@@ -9,6 +9,7 @@
 - <b>Containers</b>: Virtual Environment more like a sandbox where apps and its dependencies are installed to run
 - <b>Images</b> : Blueprint. (where Docker containers are created from)
 - <b>Dockerfile</b> : Text file that contains a list of instructions for Docker Client to call. The instructions keywords are somewhat similar to Linux commands so it should be familiar to users. It defines what goes inside(environment of) the container. Such as which ports to map to (the outside world), which files to be copied in the container. This makes sure that the app built inside the container based on that Dockerfile behaves the same wherever it runs. (Where Docker images are built from)
+  - Dockerfile is cached : Whenever docker builds an image from Dockerfile, any changes on Dockerfile is automatically detected and ran again. Otherwise the previous builds are cached as images and reproduce a new image from the old image, hence the building process is fast. Remember that image is a multi-layered file system. Each command on Dockerfile creates an image and it gets sent to the next command and the last command creates the final image. This is why we can build image on top of other images.
 - <b>Docker Daemon</b> : OS Background service in the host that handles building and running docker containers.
 - <b>Docker Client</b> : Terminal tool that the user uses to talk to Daemon.
 - <b>Docker Hub</b> : A storage of Docker images. User can host their docker image or can use existing docker images from the Docker Hub by 'pulling' it.
@@ -16,7 +17,7 @@
 
 
 
-## commands
+## Commands
 - `docker build [-t nameOfImage] path_to_Dockerfile` : Creates an image from Dockerfile. Using -t, tag allows users to give a name to the image for convenience.
 
 - `docker run [image ID or Repository Name]` : Creates a container based on the chosen Image. This is why Image is referred as blueprint; containers are created based on the instructions of Images. No interaction with the user.
