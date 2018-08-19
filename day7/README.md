@@ -58,8 +58,19 @@
 ### 7. Pull Request to merge the branch with the master
 - Go to the Repository in Github account
 - Click branches
-- Click the button where it says 'Compare and Pull Request'
+![Branch tab](images/branch.png)
+
+- Click 'New Pull Request'
+![New Pull Request](images/pullR2.png)
+
+- Fill in Title and description and click 'Create Pull Request'
+![Create PR](images/pullR1.png)
 
 
-### 8. Review and Confirm the Pull Request
--
+### 8. Review Pull Request, PR and confirm it
+- Click on 'day7' or 'edits' commits to see the code for the pull request or the serial numbers next to it. These numbers are unique hash keys that can be used to revert the codes back to that commit
+- When all the codes look correct, click 'Merge Pull Request'. Make sure the button is green, if it is grey then there is a merge conflict that needs resolving. Merge conflict arises when the changes in files are conflicting and Git does not know which one to use.
+![Pull Request](images/mergePR.png)
+
+- Final page when the merge was successful
+![Sucess PR](images/pullRequestDone.png)
