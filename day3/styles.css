@@ -4,11 +4,14 @@
   left: 50%;
   margin: -75px 0 0 -45px;
   z-index: 1;
-  width: 50px;
-  height: 50px;
-  border: 18px solid lightgrey;
-  border-top: 18px solid grey;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  /* border: 18px solid lightgrey; */
+  border-top: 15px solid grey;
+  border-right: 13px solid grey;
+  border-bottom: 5px solid grey;
+  border-left: 0px;
+  /* border-radius: 50%; */
 
   animation: spin-nonstop 2s linear infinite;
   -webkit-animation: spin-nonstop 2s linear infinite;
@@ -23,4 +26,39 @@
 @-webkit-keyframes spin-nonstop {
   0% { -webkit-transform: rotate(0deg);}
   100% { -webkit-transform: rotate(360deg);}
+}
+
+
+/* Main page when the data is ready */
+.ready {
+  position: relative;
+  display: none;
+  text-align: center;
+  padding-top: 100px;
+  animation: slideUp 1s linear;
+  -webkit-animation: slideUp 1s;
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -400px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+-webkit-@keyframes slideUp {
+  0% {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
 }

@@ -9,5 +9,19 @@
   </head>
   <body>
     <div class="preloader"></div>
+    <div class="ready">
+      <h2>The page is loaded...</h2>
+    </div>
+
+  <script>
+    function loadPage() {
+      document.getElementsByClassName('preloader')[0].style.display = "none";
+      document.getElementsByClassName('ready')[0].style.display = "block";
+    }
+
+    setTimeout(loadPage, 3000);
+
+
+  </script>
   </body>
 </html>
