@@ -53,3 +53,13 @@
 (While being on a new branch, not the Master Branch)
 - `git add [path to files]`
 - `git commit -m "message"`
+- `git push origin [name of branch]`
+
+### 7. Pull Request to merge the branch with the master
+- Go to the Repository in Github account
+- Click branches
+- Click the button where it says 'Compare and Pull Request'
+
+
+### 8. Review and Confirm the Pull Request
+-
